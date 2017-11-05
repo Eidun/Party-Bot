@@ -1,5 +1,5 @@
 import datetime
-
+import discord
 from discord.ext import commands
 
 from utils.data import birthdays
@@ -15,7 +15,6 @@ class Birthday:
         """<dd-mm-yyyy> None for know the current value"""
         # Get the author
         user = ctx.message.author
-
         if birthday_string is not None:
             birth_date = datetime.datetime.strptime(birthday_string, '%d-%m-%Y')
             birthdays[user.id] = [user, birth_date]

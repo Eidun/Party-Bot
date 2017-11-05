@@ -9,7 +9,7 @@ from utils.congratulator import celebrate
 
 description = '''Birthday-bot will remember the date your  friends don\'t, let's party!'''
 
-modules = {'cogs.birthday', 'cogs.channels_management'}
+modules = {'cogs.birthday', 'cogs.channels_management, cogs.happy_messages'}
 
 bot = commands.Bot(command_prefix='!', description=description)
 
@@ -39,4 +39,4 @@ async def on_ready():
 # Periodically celebrate
 bot.loop.create_task(celebrate(bot))
 # Test bot
-bot.run('Mzc1NjQ1MDYwODk0NTU2MTYy.DNy2Qw.JQEl9nSWwdfqNwPcA3SgJnD41v4')
+bot.run('MTg3MTU3Nzk1MjA2ODU2NzA0.DNswdQ.YbBnY8Xto9LkNNlZY9W0ZQ86G_o')
