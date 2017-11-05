@@ -9,7 +9,7 @@ from utils.congratulator import celebrate
 
 description = '''Birthday-bot will remember the date your  friends don\'t, let's party!'''
 
-modules = {'cogs.birthday', 'cogs.channels_management, cogs.happy_messages'}
+modules = {'cogs.birthday', 'cogs.channels_management', 'cogs.happy_messages'}
 
 bot = commands.Bot(command_prefix='!', description=description)
 

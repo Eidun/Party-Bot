@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8c2c32cf-f967-4cf7-963b-4fee632cb0a2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bot.py" afterPath="$PROJECT_DIR$/bot.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cogs/birthday.py" afterPath="$PROJECT_DIR$/cogs/birthday.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/congratulator.py" afterPath="$PROJECT_DIR$/utils/congratulator.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
