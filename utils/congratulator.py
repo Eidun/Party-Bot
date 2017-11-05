@@ -7,8 +7,14 @@ import datetime
 
 
 async def celebrate(bot:commands.Bot):
+    counter = 0
     while not bot.is_closed:
-        await asyncio.sleep(60 * 1)
+        await asyncio.sleep(60)
+        counter += 1
+        if counter < 60 * 24:
+            print(counter)
+            continue
+        counter = 0
         print(birthdays)
         birthday_people = get_birthday_people()
         for birth_person in birthday_people:
