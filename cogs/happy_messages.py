@@ -22,7 +22,7 @@ class Happy:
     @commands.has_role('ADMIN')
     async def remove_congratulate_messages(self, ctx):
         """Removes ALL current messages"""
-        messages = []
+        del messages[:]
         await self.bot.send_message(ctx.message.channel, 'All messages removed.')
 
 
