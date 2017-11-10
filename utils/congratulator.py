@@ -1,6 +1,6 @@
 import asyncio
 import discord
-from utils.data import birthdays, channels, images, messages
+from utils.data import birthdays, channels, images, messages, congratulated
 from discord.ext import commands
 import random
 import datetime
@@ -9,13 +9,8 @@ import datetime
 async def celebrate(bot:commands.Bot):
     counter = 0
     while not bot.is_closed:
-        await asyncio.sleep(60)
-        counter += 1
-        if counter < 60 * 24:
-            print(counter)
-            continue
-        counter = 0
-        print(birthdays)
+        await asyncio.sleep(10)
+
         birthday_people = get_birthday_people()
         for birth_person in birthday_people:
             user = birth_person[0]
@@ -32,11 +27,19 @@ async def celebrate(bot:commands.Bot):
 
 def get_birthday_people():
     birthday_people = []
+    print('Birthdays: ' + str(birthdays))
+    print('Congratulated: ' + str(congratulated))
     for user in birthdays.values():
+        if user[0].id in congratulated:
+            print('Already')
+            continue
         birth_date = user[1]
+
         today = datetime.datetime.now()
         if today.day == birth_date.day and today.month == birth_date.month:
             birthday_people.append(user)
+            congratulated.append(user[0].id)
+    print('People to congratulate:' + str(birthday_people))
     return birthday_people
 
 

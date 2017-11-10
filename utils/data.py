@@ -1,4 +1,5 @@
 birthdays = {}
+congratulated = []
 channels = {}
 
 

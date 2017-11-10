@@ -2,7 +2,7 @@ import datetime
 import discord
 from discord.ext import commands
 
-from utils.data import birthdays
+from utils.data import birthdays, congratulated
 
 
 class Birthday:
@@ -18,6 +18,9 @@ class Birthday:
         if birthday_string is not None:
             birth_date = datetime.datetime.strptime(birthday_string, '%d-%m-%Y')
             birthdays[user.id] = [user, birth_date]
+            if user.id in congratulated:
+                print('Removing')
+                congratulated.remove(user.id)
         if user.id in birthdays:
             birth_date = birthdays[user.id][1]
             await self.bot.say('Your birthday is {}'.format(birth_date.strftime('%d-%m-%Y')))

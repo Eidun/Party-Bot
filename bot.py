@@ -39,4 +39,4 @@ async def on_ready():
 # Periodically celebrate
 bot.loop.create_task(celebrate(bot))
 # Test bot
-bot.run('Mzc1NjQ1MDYwODk0NTU2MTYy.DOD1Uw.U9NwfhcZCJNJzoG21rW0L1XWgwE')
+bot.run('Mzc1NjQ1MDYwODk0NTU2MTYy.DOccjg.V4kq1W-scg5h3EJlrMfewNgJT3c')
