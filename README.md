@@ -1,0 +1,2 @@
+# Party-Bot
+Celebrates parties!
